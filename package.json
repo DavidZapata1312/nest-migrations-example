@@ -1,0 +1,24 @@
+{
+  "name": "nest-migrations-example",
+  "version": "1.0.0",
+  "description": "Example project showing TypeORM migrations and seeders with sqlite",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register src/index.ts || echo 'No server; example only'",
+    "migration:generate": "npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:generate src/migrations/CreateUsersTable -d src/data-source.ts",
+    "migration:run": "npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:run -d src/data-source.ts",
+    "migration:revert": "npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js migration:revert -d src/data-source.ts",
+    "seed": "npx ts-node src/database/seeders/seed.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "pg": "^8.16.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^4.9.5"
+  }
+}
