@@ -50,7 +50,7 @@ nest-migrations-example/
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/tuusuario/nest-migrations-example.git
+git clone https://github.com/DavidZapata1312/nest-migrations-example.git
 
 cd nest-migrations-example
 
